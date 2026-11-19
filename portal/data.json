@@ -1,0 +1,164 @@
+[
+ {
+  "ref": "ST-1001",
+  "supplier": "Tern Valley Eggs",
+  "invoice_no": "162443",
+  "date": "2026-09-01",
+  "amount": 842.47,
+  "currency": "USD",
+  "file": "dev01_classic_tern.pdf"
+ },
+ {
+  "ref": "ST-1002",
+  "supplier": "Ember Coffee Roasters",
+  "invoice_no": "5766",
+  "date": "2026-09-05",
+  "amount": 1205.58,
+  "currency": "USD",
+  "file": "dev02_classic_ember.pdf"
+ },
+ {
+  "ref": "ST-1003",
+  "supplier": "Wren Electric Services",
+  "invoice_no": "INV-2026-303",
+  "date": "2026-09-27",
+  "amount": 360.35,
+  "currency": "GBP",
+  "file": "dev03_classic_wren.pdf"
+ },
+ {
+  "ref": "ST-1004",
+  "supplier": "Ember Coffee Roasters",
+  "invoice_no": "3267",
+  "date": "2026-10-04",
+  "amount": 4192.71,
+  "currency": "USD",
+  "file": "dev04_classic_ember.pdf"
+ },
+ {
+  "ref": "ST-1005",
+  "supplier": "Kestrel Fuel Cards",
+  "invoice_no": "KFC-54776",
+  "date": "2026-10-18",
+  "amount": 553.32,
+  "currency": "USD",
+  "file": "dev05_classic_kestrel_scan.jpg"
+ },
+ {
+  "ref": "ST-1006",
+  "supplier": "Hollis & Pike Equipment",
+  "invoice_no": "INV-2026-898",
+  "date": "2026-09-02",
+  "amount": 1742.87,
+  "currency": "USD",
+  "file": "dev06_classic_hollis_scan.png"
+ },
+ {
+  "ref": "ST-1007",
+  "supplier": "Ember Coffee Roasters",
+  "invoice_no": "7782",
+  "date": "2026-09-29",
+  "amount": 629.55,
+  "currency": "GBP",
+  "file": "dev07_modern_ember.pdf"
+ },
+ {
+  "ref": "ST-1008",
+  "supplier": "Wren Electric Services",
+  "invoice_no": "WES-41117",
+  "date": "2026-09-02",
+  "amount": 230.31,
+  "currency": "USD",
+  "file": "dev08_modern_wren.pdf"
+ },
+ {
+  "ref": "ST-1009",
+  "supplier": "Wren Electric Services",
+  "invoice_no": "WES-27027",
+  "date": "2026-09-27",
+  "amount": 858.47,
+  "currency": "EUR",
+  "file": "dev09_modern_wren.pdf"
+ },
+ {
+  "ref": "ST-1010",
+  "supplier": "Quarry Road Print",
+  "invoice_no": "2049",
+  "date": "2026-10-02",
+  "amount": 1012.44,
+  "currency": "GBP",
+  "file": "dev10_modern_quarry_scan.pdf"
+ },
+ {
+  "ref": "ST-1011",
+  "supplier": "Brightwater Dairy",
+  "invoice_no": "BD-63881",
+  "date": "2026-10-02",
+  "amount": 624.37,
+  "currency": "USD",
+  "file": "dev11_receipt_brightwater.pdf"
+ },
+ {
+  "ref": "ST-1012",
+  "supplier": "Saltmarsh Linen Hire",
+  "invoice_no": "358240",
+  "date": "2026-10-29",
+  "amount": 24.4,
+  "currency": "GBP",
+  "file": "dev12_receipt_saltmarsh.pdf"
+ },
+ {
+  "ref": "ST-1013",
+  "supplier": "Tern Valley Eggs",
+  "invoice_no": "993301",
+  "date": "2026-10-02",
+  "amount": 570.86,
+  "currency": "USD",
+  "file": "dev13_receipt_tern_scan.jpg"
+ },
+ {
+  "ref": "ST-1014",
+  "supplier": "Brightwater Dairy",
+  "invoice_no": "201728",
+  "date": "2026-09-06",
+  "amount": 797.4,
+  "currency": "USD",
+  "file": null
+ },
+ {
+  "ref": "ST-1015",
+  "supplier": "Wren Electric Services",
+  "invoice_no": "805626",
+  "date": "2026-09-12",
+  "amount": 938.64,
+  "currency": "GBP",
+  "file": "dev15_bill_wren.pdf"
+ },
+ {
+  "ref": "ST-1016",
+  "supplier": "Alder & Finch Packaging",
+  "invoice_no": "AFP-63123",
+  "date": "2026-09-24",
+  "amount": 223.3,
+  "currency": "USD",
+  "file": "dev16_bill_alder_scan.png"
+ },
+ {
+  "ref": "ST-1017",
+  "supplier": "Wren Electric Services",
+  "invoice_no": "INV-2026-203",
+  "date": "2026-10-22",
+  "amount": -646.02,
+  "currency": "USD",
+  "file": "dev17_classic_wren.pdf"
+ },
+ {
+  "ref": "ST-1018",
+  "supplier": "Northgate Cleaning Supplies",
+  "invoice_no": "INV-2026-356",
+  "date": "2026-09-25",
+  "amount": -604.21,
+  "currency": "GBP",
+  "file": "dev18_modern_northgate.pdf"
+ }
+]

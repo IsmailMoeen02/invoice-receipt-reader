@@ -1,0 +1,347 @@
+{
+ "name": "Documents to review: Fernhill Document Desk",
+ "nodes": [
+  {
+   "id": "826102db-94a6-5ac6-90f0-05e75171bab6",
+   "name": "New document (test inbox)",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    0,
+    120
+   ],
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "incoming-document",
+    "responseMode": "responseNode",
+    "options": {}
+   },
+   "webhookId": "d0c0ffee-1111-4222-8333-444455556666"
+  },
+  {
+   "id": "b61cc483-31fc-5d39-9dc9-873d41b50ca6",
+   "name": "Mailbox with invoices (production)",
+   "type": "n8n-nodes-base.emailReadImap",
+   "typeVersion": 2,
+   "position": [
+    0,
+    320
+   ],
+   "parameters": {
+    "mailbox": "INBOX",
+    "postProcessAction": "read",
+    "format": "resolved",
+    "options": {
+     "downloadAttachments": true
+    }
+   },
+   "disabled": true,
+   "notes": "Switch this on and add the IMAP login for the mailbox invoices are sent to. Each PDF or image attachment goes through the same flow as the test inbox on the left."
+  },
+  {
+   "id": "6750ea5d-648d-55e5-b1ed-a1cf0130c0d4",
+   "name": "Prepare document",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    260,
+    220
+   ],
+   "parameters": {
+    "jsCode": "// Test inbox: JSON with content_base64.  Mailbox trigger: the attachment arrives as a binary file. Both become the same request.\nconst item = $input.first();\nconst b = item.json.body && typeof item.json.body === 'object' ? item.json.body : item.json;\nlet filename = b.filename, content = b.content_base64, source = b.source || 'n8n';\nif (!content && item.binary) {\n  const key = Object.keys(item.binary)[0];\n  const buf = await this.helpers.getBinaryDataBuffer(0, key);\n  content = buf.toString('base64'); filename = filename || item.binary[key].fileName || 'document'; source = 'mailbox';\n}\nif (!content) throw new Error('No file found on this item');\nreturn [{ json: { filename, content_base64: content, source } }];"
+   }
+  },
+  {
+   "id": "d8684470-511b-5e9b-b1e8-59ab9a5f3f6b",
+   "name": "Send to Document Desk",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    520,
+    220
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8796/api/inbound",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "X-Inbound-Key",
+       "value": "demo-key"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json) }}",
+    "options": {
+     "timeout": 120000
+    }
+   }
+  },
+  {
+   "id": "9a3871ab-d507-52ad-a540-1da6c9d696c8",
+   "name": "How did it read?",
+   "type": "n8n-nodes-base.switch",
+   "typeVersion": 3.2,
+   "position": [
+    780,
+    200
+   ],
+   "parameters": {
+    "rules": {
+     "values": [
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "typeValidation": "loose",
+         "version": 2
+        },
+        "combinator": "and",
+        "conditions": [
+         {
+          "leftValue": "={{ $json.status }}",
+          "rightValue": "ready",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ]
+       },
+       "renameOutput": true,
+       "outputKey": "Ready"
+      },
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "typeValidation": "loose",
+         "version": 2
+        },
+        "combinator": "and",
+        "conditions": [
+         {
+          "leftValue": "={{ $json.status }}",
+          "rightValue": "review",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ]
+       },
+       "renameOutput": true,
+       "outputKey": "Needs a person"
+      }
+     ]
+    },
+    "options": {
+     "fallbackOutput": "extra",
+     "renameFallbackOutput": "Could not read"
+    }
+   }
+  },
+  {
+   "id": "d5448fa6-2631-5f4c-b6ea-0dcfab2ffda6",
+   "name": "Ready for approval",
+   "type": "n8n-nodes-base.noOp",
+   "typeVersion": 1,
+   "position": [
+    1060,
+    40
+   ],
+   "parameters": {},
+   "notes": "Every check passed. It waits in the inbox for a one-click approval."
+  },
+  {
+   "id": "169d6403-8df6-52f6-9e90-f4803b3ea593",
+   "name": "Write review note",
+   "type": "n8n-nodes-base.set",
+   "typeVersion": 3.4,
+   "position": [
+    1060,
+    220
+   ],
+   "parameters": {
+    "assignments": {
+     "assignments": [
+      {
+       "id": "a1",
+       "name": "text",
+       "type": "string",
+       "value": "={{ 'Document ' + $json.id + ' from ' + ($json.supplier || 'an unknown supplier') + ' (total ' + $json.total + ') needs a person to check it. Open Document Desk, Needs review.' }}"
+      }
+     ]
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "1eeecc41-a742-5ed6-b3ee-d014ca205d92",
+   "name": "Post to chat",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1300,
+    220
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "http://127.0.0.1:8799/",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ text: $json.text }) }}",
+    "options": {}
+   },
+   "notes": "Points at a local stand-in for a Slack incoming webhook. Replace the URL with a real one."
+  },
+  {
+   "id": "b2d24d05-94a7-5f76-8b96-10d68b48aafb",
+   "name": "Could not read",
+   "type": "n8n-nodes-base.noOp",
+   "typeVersion": 1,
+   "position": [
+    1060,
+    420
+   ],
+   "parameters": {},
+   "notes": "Nothing could be read (blank page, damaged file). A person opens it from the Failed filter."
+  },
+  {
+   "id": "7336aff9-6900-5743-9837-1433ede4a4e2",
+   "name": "Reply with result",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    1540,
+    240
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={{ JSON.stringify($('Send to Document Desk').first().json) }}",
+    "options": {}
+   }
+  }
+ ],
+ "connections": {
+  "New document (test inbox)": {
+   "main": [
+    [
+     {
+      "node": "Prepare document",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Mailbox with invoices (production)": {
+   "main": [
+    [
+     {
+      "node": "Prepare document",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Prepare document": {
+   "main": [
+    [
+     {
+      "node": "Send to Document Desk",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Send to Document Desk": {
+   "main": [
+    [
+     {
+      "node": "How did it read?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "How did it read?": {
+   "main": [
+    [
+     {
+      "node": "Ready for approval",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Write review note",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Could not read",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Ready for approval": {
+   "main": [
+    [
+     {
+      "node": "Reply with result",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Write review note": {
+   "main": [
+    [
+     {
+      "node": "Post to chat",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Post to chat": {
+   "main": [
+    [
+     {
+      "node": "Reply with result",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Could not read": {
+   "main": [
+    [
+     {
+      "node": "Reply with result",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1"
+ }
+}

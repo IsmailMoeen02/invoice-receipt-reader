@@ -1,0 +1,22 @@
+
+== heldout: 20 documents in 44s
+  supplier    20/20  100.0%
+  invoice_no  20/20  100.0%
+  issue_date  20/20  100.0%
+  due_date    19/20  95.0%
+  currency    20/20  100.0%
+  subtotal    20/20  100.0%
+  tax         20/20  100.0%
+  total       20/20  100.0%
+  po          20/20  100.0%
+  kind        20/20  100.0%
+  items       19/20  95.0%
+  all fields right: 19/20  (95%)
+  digital: 12/12 fully right
+  scanned: 7/8 fully right
+  status: ready 18, review 2, failed 0; wrong but marked ready: 0
+  wrong documents caught for review: 1 of 1
+
+  hel11_receipt_northgate_scan.jpg [review]
+     due_date: got None want 2026-10-31
+     items: got [36.8, 44.7, 88.0, 93.0, 198.0] want [36.8, 44.7, 88.0, 93.0, 170.1, 198.0]

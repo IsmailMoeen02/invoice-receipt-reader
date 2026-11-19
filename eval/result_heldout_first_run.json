@@ -1,0 +1,401 @@
+{
+ "name": "heldout",
+ "n": 20,
+ "per_field": {
+  "supplier": 20,
+  "invoice_no": 20,
+  "issue_date": 20,
+  "due_date": 19,
+  "currency": 20,
+  "subtotal": 20,
+  "tax": 20,
+  "total": 20,
+  "po": 20,
+  "kind": 20,
+  "items": 19
+ },
+ "docs_ok": 19,
+ "wrong_ready": 0,
+ "rows": [
+  [
+   "hel01_euro_northgate.pdf",
+   "euro",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel02_euro_wren.pdf",
+   "euro",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel03_euro_northgate_scan.png",
+   "euro+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel04_classic_wren.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel05_classic_cobble.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel06_modern_tern.pdf",
+   "modern",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel07_modern_ember_scan.jpg",
+   "modern+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel08_bill_ember.pdf",
+   "bill",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel09_bill_kestrel_scan.png",
+   "bill+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel10_receipt_alder.pdf",
+   "receipt",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel11_receipt_northgate_scan.jpg",
+   "receipt+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": false,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": false
+   },
+   "review"
+  ],
+  [
+   "hel12_classic_hollis.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel13_classic_hollis_scan.pdf",
+   "classic+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel14_euro_wren.pdf",
+   "euro",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel15_modern_cobble_scan.jpg",
+   "modern+rough",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "review"
+  ],
+  [
+   "hel16_bill_alder.pdf",
+   "bill",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel17_classic_saltmarsh.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel18_classic_northgate_scan.jpg",
+   "classic+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel19_euro_millbrook_scan.jpg",
+   "euro+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "hel20_modern_millbrook.pdf",
+   "modern",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ]
+ ]
+}

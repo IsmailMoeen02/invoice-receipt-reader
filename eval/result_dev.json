@@ -1,0 +1,477 @@
+{
+ "name": "dev",
+ "n": 24,
+ "per_field": {
+  "supplier": 24,
+  "invoice_no": 24,
+  "issue_date": 24,
+  "due_date": 24,
+  "currency": 24,
+  "subtotal": 24,
+  "tax": 24,
+  "total": 24,
+  "po": 24,
+  "kind": 24,
+  "items": 23
+ },
+ "docs_ok": 23,
+ "wrong_ready": 0,
+ "rows": [
+  [
+   "dev01_classic_tern.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev02_classic_ember.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev03_classic_wren.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev04_classic_ember.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev05_classic_kestrel_scan.jpg",
+   "classic+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev06_classic_hollis_scan.png",
+   "classic+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev07_modern_ember.pdf",
+   "modern",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev08_modern_wren.pdf",
+   "modern",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev09_modern_wren.pdf",
+   "modern",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev10_modern_quarry_scan.pdf",
+   "modern+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev11_receipt_brightwater.pdf",
+   "receipt",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "review"
+  ],
+  [
+   "dev12_receipt_saltmarsh.pdf",
+   "receipt",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev13_receipt_tern_scan.jpg",
+   "receipt+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "review"
+  ],
+  [
+   "dev14_bill_brightwater.pdf",
+   "bill",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev15_bill_wren.pdf",
+   "bill",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev16_bill_alder_scan.png",
+   "bill+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev17_classic_wren.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev18_modern_northgate.pdf",
+   "modern",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev19_classic_hollis.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev20_classic_northgate.pdf",
+   "classic",
+   false,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev21_bill_kestrel_scan.jpg",
+   "bill+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev22_modern_brightwater_scan.jpg",
+   "modern+rough",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev23_classic_northgate_scan.pdf",
+   "classic+medium",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": true
+   },
+   "ready"
+  ],
+  [
+   "dev24_receipt_tern_scan.jpg",
+   "receipt+mild",
+   true,
+   {
+    "supplier": true,
+    "invoice_no": true,
+    "issue_date": true,
+    "due_date": true,
+    "currency": true,
+    "subtotal": true,
+    "tax": true,
+    "total": true,
+    "po": true,
+    "kind": true,
+    "items": false
+   },
+   "review"
+  ]
+ ]
+}
